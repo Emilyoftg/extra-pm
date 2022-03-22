@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 @Client.on_message(filters.command("start"))
 async def start(bot, cmd):
     usr_cmdall1 = cmd.text
-    if usr_cmdall1.startswith("/start subinps"):
+    if usr_cmdall1.startswith("/start MovieClubOfficiall"):
         if AUTH_CHANNEL:
             invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
             try:
@@ -31,10 +31,8 @@ async def start(bot, cmd):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [ 
-                                InlineKeyboardButton("♥️ 𝙹𝙾𝙸𝙽 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ♥️", url=invite_link.invite_link)                           
-                            ],
-                            [
-                                InlineKeyboardButton("♻️ 𝚃𝚁𝚈 𝙰𝙶𝙰𝙸𝙽 ♻️", callback_data=f"checksub#{file_id}")
+                                InlineKeyboardButton("Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url=invite_link.invite_link),                           
+                                InlineKeyboardButton("Tʀʏ Aɢᴀɪɴ", callback_data=f"checksub#{file_id}")
                             ]
                         ]
                     ),
@@ -66,7 +64,11 @@ async def start(bot, cmd):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [                
-                        InlineKeyboardButton('✅ 𝚂𝚄𝙱𝚂𝙲𝚁𝙸𝙱𝙴 ✅', url='https://youtube.com/channel/UCf_dVNrilcT0V2R--HbYpMA')
+                        InlineKeyboardButton('🕵️‍♂️ Sᴇᴀʀᴄʜ Aɢᴀɪɴ', switch_inline_query_current_chat='' ),
+                        InlineKeyboardButton('⚙️ Bᴏᴛ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ ⚙️', url='https://t.me/+R8q2jt6vUlkwNzI1')
+                    ]
+                    [
+                        InlineKeyboardButton('🖥️ Oᴛᴛ & Sᴇʀɪᴇs Uᴘᴅᴀᴛᴇs 🖥️', url='https://t.me/+zes5Oxd7mGgwZTBl')
                     ]
                     ]
                 await bot.send_cached_media(
