@@ -165,7 +165,7 @@ async def log_file(bot, message):
         await message.reply(str(e))
 
 
-@Client.on_message(filters.command('start'))
+@Client.on_message(filters.command('mee'))
 async def bot_info(bot, message):
     buttons = [
         [
